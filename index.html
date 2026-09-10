@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>个人简历 — 名字姓名</title>
+  <meta name="description" content="交互式个人简历 — 名字姓名。包含个人信息、技能、经历、项目与联系方式。" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">名字姓名</a>
+      <button id="nav-toggle" aria-label="切换导航" aria-expanded="false">☰</button>
+      <nav id="nav" class="site-nav">
+        <ul>
+          <li><a href="#about">关于</a></li>
+          <li><a href="#skills">技能</a></li>
+          <li><a href="#experience">经历</a></li>
+          <li><a href="#projects">项目</a></li>
+          <li><a href="#contact">联系</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-left" data-anim>
+          <h1>你好，我是 <span class="accent">名字姓名</span></h1>
+          <p class="lead">前端工程师 / 交互设计爱好者。喜欢打造流畅的用户体验与精致的界面。</p>
+          <p class="cta">
+            <a class="btn primary" href="#projects">查看项目</a>
+            <a class="btn outline" href="#contact">联系我</a>
+          </p>
+        </div>
+        <div class="hero-right" data-anim>
+          <div class="profile-card">
+            <!-- 将下面的占位图替换为您的头像（建议 400x400） -->
+            <div class="avatar" role="img" aria-label="头像"></div>
+            <div class="bio">
+              <h3>名字姓名</h3>
+              <p>城市 · 职位 · 可远程</p>
+              <p class="small">一句短的个人简介，突出专业与价值。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg class="hero-wave" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,32L48,48C96,64,192,96,288,106.7C384,117,480,107,576,96C672,85,768,75,864,64C960,53,1056,43,1152,48C1248,53,1344,75,1392,85.3L1440,96L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z" fill="var(--wave)"></path></svg>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container" data-anim>
+        <h2>关于我</h2>
+        <p>我是一名热爱前端的工程师，擅长将视觉设计与工程实现融合，追求交互的细腻与性能的平衡。熟悉 React、Vanilla JS、CSS 动画与无障碍实践。</p>
+        <div class="stats">
+          <div class="stat">
+            <strong>5+</strong>
+            <span>年开发经验</span>
+          </div>
+          <div class="stat">
+            <strong>30+</strong>
+            <span>完成项目</span>
+          </div>
+          <div class="stat">
+            <strong>开源贡献</strong>
+            <span>若干</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="container" data-anim>
+        <h2>技能特长</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>前端开发</h3>
+            <p>HTML5、CSS3、JavaScript、TypeScript、React、Vite</p>
+          </div>
+          <div class="skill-card">
+            <h3>界面与交互</h3>
+            <p>响应式设计、微交互、动画（CSS + JS）、设计系统</p>
+          </div>
+          <div class="skill-card">
+            <h3>工程化</h3>
+            <p>打包优化、代码质量、单元测试、CI/CD</p>
+          </div>
+          <div class="skill-card">
+            <h3>工具</h3>
+            <p>Figma、Git、Chrome DevTools、Webpack/ESBuild</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container" data-anim>
+        <h2>工作经历</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3>公司 A · 前端工程师</h3>
+            <time>2021.06 — 至今</time>
+            <p>负责核心产品的前端开发与性能优化，推动组件化改造与交互体验改进。</p>
+          </article>
+          <article class="timeline-item">
+            <h3>公司 B · 前端开发</h3>
+            <time>2018.03 — 2021.05</time>
+            <p>参与多个 B2B 项目的开发，负责 UI 实现与跨团队联调。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section alt">
+      <div class="container" data-anim>
+        <h2>项目展示</h2>
+        <div class="projects-grid">
+          <article class="project-card" tabindex="0" data-project="1">
+            <div class="project-thumb"></div>
+            <div class="project-body">
+              <h3>项目一名称</h3>
+              <p class="muted">短描述：一个注重体验与性能的前端项目。</p>
+              <p class="tags">React · Vite · 性能优化</p>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" data-project="2">
+            <div class="project-thumb"></div>
+            <div class="project-body">
+              <h3>项目二名称</h3>
+              <p class="muted">短描述：结合可视化与交互的仪表盘项目。</p>
+              <p class="tags">D3 · SVG · 可视化</p>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" data-project="3">
+            <div class="project-thumb"></div>
+            <div class="project-body">
+              <h3>开源库 / 工具</h3>
+              <p class="muted">短描述：对外开放的工具或组件库。</p>
+              <p class="tags">npm · Document · Demo</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container" data-anim>
+        <h2>联系方式</h2>
+        <p>欢迎通过邮件或社交方式联系我，或在下面填写信息快速发消息。</p>
+        <form id="contact-form" class="contact-form" action="#" onsubmit="return false;">
+          <label>
+            <span>姓名</span>
+            <input type="text" id="cf-name" placeholder="您的姓名" required />
+          </label>
+          <label>
+            <span>邮箱</span>
+            <input type="email" id="cf-email" placeholder="example@domain.com" required />
+          </label>
+          <label>
+            <span>信息</span>
+            <textarea id="cf-message" rows="4" placeholder="留下您的留言..."></textarea>
+          </label>
+          <p class="form-actions">
+            <button id="cf-send" class="btn primary">发送消息</button>
+            <a class="btn outline" href="mailto:your.email@example.com">发送邮件</a>
+          </p>
+        </form>
+        <ul class="contact-links">
+          <li><strong>邮箱：</strong>your.email@example.com</li>
+          <li><strong>电话：</strong>+86 138 0000 0000</li>
+          <li><strong>Github：</strong><a href="https://github.com/USERNAME" target="_blank" rel="noopener">@USERNAME</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> 名字姓名 — 保留所有权利</p>
+    </div>
+  </footer>
+
+  <div id="project-modal" class="modal" aria-hidden="true">
+    <div class="modal-inner">
+      <button id="modal-close" class="modal-close" aria-label="关闭">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

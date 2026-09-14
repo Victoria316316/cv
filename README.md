@@ -1,25 +1,32 @@
-# 模块化个人作品集
+# 交互式个人简历页 (Interactive CV)
 
-这是一个无需构建工具、打开 `index.html` 即可运行的动态作品集网站。页面结构保留在 HTML 中，个人资料、技能、经历、作品和其他服务模块统一由 JavaScript 数据驱动生成。
+本项目在仓库根目录添加了一个简洁、具有设计感且响应式的个人简历网页。
 
-## 文件结构
+包含文件：
 
-- `index.html`：页面骨架、导航、弹窗容器和脚本入口
-- `assets/js/script.js`：内容数据、模块渲染和交互逻辑
-- `assets/css/style.css`：响应式视觉样式
+- index.html — 主页面
+- assets/css/style.css — 样式表（响应式、动效、色彩方案）
+- assets/js/script.js — 交互脚本（滚动动画、模态、表单邮件）
 
-## 更新内容
+特点：
+- 清晰的版块：关于、技能、经历、项目、联系方式
+- 滚动进入动画（IntersectionObserver）
+- 悬停与按键可访问的项目卡片，带模态详情
+- 响应式布局（桌面 / 平板 / 手机）
+- 可替换的头像与联系方式
 
-打开 `assets/js/script.js` 顶部的 `portfolioData`，可以直接更新：
+如何使用：
+1. 克隆仓库并打开 `index.html` 在浏览器中查看。
+2. 将 `index.html` 中的占位文本（名字、简介、联系方式）替换为您的内容。
+3. 将 `assets/css/style.css` 中的变量替换或调整配色，以符合个人品牌。
+4. 若要在项目卡片中添加真实链接，请修改 `index.html` 中对应卡片或扩展 `assets/js/script.js` 中的模态内容加载逻辑。
 
-- `profile`：姓名、职位、简介、联系方式和统计数据
-- `skills`：技能卡片
-- `experience`：工作经历时间线
-- `projects`：作品卡片、详情、标签、分类和链接
-- `services`：其他内容模块
+定制建议：
+- 替换头像：将您的头像文件放入 `assets/` 并在样式中替换 `.avatar` 的背景或在 HTML 中改为 <img> 标签。
+- 若需更复杂的动画，可引入 GSAP 或 Lottie，但当前实现尽量保持轻量。
 
-新增作品时，在 `projects` 数组中追加一个对象即可。`type` 用于筛选，`demo` 和 `code` 用于弹窗中的链接，`accent` 可填写 `mint`、`coral` 或 `blue` 来切换作品色块。
-
-## 运行
-
-直接双击 `index.html`，或用 VS Code 的 Live Server 打开。联系表单当前使用 `mailto` 打开本地邮件客户端，不需要后端服务；接入真实后端时，只需替换 `setupInteractions` 中表单提交部分。
+如果您希望我：
+- 将内容替换为您的真实信息（我可以代为编辑具体文本），
+- 添加项目截图与链接并在模态中显示，
+- 或者把页面部署为 GitHub Pages（我可以为您创建 gh-pages 分支并配置），
+请告诉我下一步的目标。

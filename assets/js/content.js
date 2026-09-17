@@ -43,9 +43,9 @@ export const portfolioData = {
     { period: '07/2024 — 01/2025', company: '美团校园俱乐部', role: '校园品牌大使', description: '策划并落地 6+ 场校园品牌推广活动，开展校园消费行为调研与用户互动效果分析，搭建并运营 5 个学生社群，核心用户增长 500 余人。', category: '创业与学生领导经历' }
   ],
   projects: [
-    { id: 1, type: '产品', title: 'Northstar 工作台', description: '为复杂业务团队设计的任务与数据协同工作台。', details: '重新梳理信息架构和关键操作路径，将高频任务集中在一个可扫描、可追踪的工作台中。', tags: ['React', 'Design system', 'UX'], accent: 'mint', demo: '#', code: '#' },
-    { id: 2, type: '实验', title: 'Pulse 数据叙事', description: '用轻量动效把抽象数据变成可理解的故事。', details: '探索 SVG、滚动状态和渐进式披露的结合，让仪表盘从“看数字”变成“理解变化”。', tags: ['D3', 'SVG', 'Motion'], accent: 'coral', demo: '#', code: '#' },
-    { id: 3, type: '开源', title: 'Tiny Blocks', description: '一组面向内容型网站的无依赖 UI 小组件。', details: '沉淀常用的布局、提示和状态组件，强调语义化 HTML、低门槛接入和可读文档。', tags: ['Web components', 'Docs', 'Open source'], accent: 'blue', demo: '#', code: '#' }
+    { id: 1, type: '产品', title: 'Northstar 工作台', client: 'Northstar Labs', description: '为复杂业务团队设计的任务与数据协同工作台。', details: '重新梳理信息架构和关键操作路径，将高频任务集中在一个可扫描、可追踪的工作台中。', tags: ['Project', 'React', 'UX'], accent: 'mint', demo: '#', code: '#' },
+    { id: 2, type: '实验', title: 'Pulse 数据叙事', client: 'Pulse Studio', description: '用轻量动效把抽象数据变成可理解的故事。', details: '探索 SVG、滚动状态和渐进式披露的结合，让仪表盘从“看数字”变成“理解变化”。', tags: ['Project', 'D3', 'Motion'], accent: 'coral', demo: '#', code: '#' },
+    { id: 3, type: '开源', title: 'Tiny Blocks', client: 'Open Source', description: '一组面向内容型网站的无依赖 UI 小组件。', details: '沉淀常用的布局、提示和状态组件，强调语义化 HTML、低门槛接入和可读文档。', tags: ['Project', 'Web components', 'Docs'], accent: 'blue', demo: '#', code: '#' }
   ],
   services: [
     { number: 'A', title: '产品界面', text: '从信息架构到高保真落地，建立清晰、可扩展的产品体验。' },

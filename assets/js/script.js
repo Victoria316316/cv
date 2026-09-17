@@ -11,19 +11,39 @@ function renderPortfolio(data) {
 
   document.getElementById('app').innerHTML = `
     <section class="hero" id="home">
-      <div class="container hero-inner">
-        <div class="hero-left" data-anim>
-          <p class="eyebrow">PORTFOLIO / ${escapeHtml(portfolioData.site.year)}</p>
-          <h1>你好，我是 <span class="accent">${escapeHtml(profile.name)}</span></h1>
-          <p class="lead">${escapeHtml(profile.intro)}</p>
-          <p class="cta"><a class="btn primary" href="#projects">浏览作品 <span>↗</span></a><a class="btn outline" href="#contact">和他聊聊</a><button class="btn text-btn" id="resume-download" type="button">下载简历 ↓</button></p>
+      <div class="container hero-shell" data-anim>
+        <div class="hero-art">
+          <div class="shape balloon"></div>
+          <div class="shape ring ring-a"></div>
+          <div class="shape ring ring-b"></div>
+          <div class="shape star star-a"></div>
+          <div class="shape glove"></div>
+          <div class="shape portrait"></div>
+          <div class="shape hand"></div>
+          <div class="shape pose"></div>
+          <div class="shape heart heart-a"></div>
+          <div class="shape blob green"></div>
+          <div class="shape flower flower-a"></div>
         </div>
-        <div class="hero-right" data-anim>
-          <div class="profile-card"><div class="avatar" role="img" aria-label="${escapeHtml(profile.name)}的头像"><span>${escapeHtml(profile.name.slice(0, 1))}</span></div><div class="bio"><h3>${escapeHtml(profile.name)}</h3><p>${escapeHtml(profile.location)}</p><p class="small">${escapeHtml(profile.role)}</p></div></div>
-          <div class="availability"><span class="status-dot"></span>${escapeHtml(portfolioData.site.availability)}</div>
+
+        <div class="hero-text-wrap">
+          <h1>We built a better age<br>For your next big move</h1>
+        </div>
+
+        <div class="floating-nav" aria-label="Section navigation">
+          <a href="#home" class="nav-pill active">Home</a>
+          <a href="#projects" class="nav-pill">Case Studies</a>
+          <a href="#services" class="nav-pill">Services</a>
+          <a href="#insights" class="nav-pill">Insights</a>
+          <a href="#about" class="nav-pill">About</a>
+          <a href="#contact" class="nav-pill accent">Agency</a>
+        </div>
+
+        <div class="hero-bottom-bar">
+          <button class="mini-cta" type="button">Upvote <span>26</span></button>
+          <a class="main-cta" href="#contact">Open Live site</a>
         </div>
       </div>
-      <div class="hero-note">SCROLL TO EXPLORE <span>↓</span></div>
     </section>
 
     <section id="about" class="section"><div class="container split-layout" data-anim><div class="section-intro"><p class="eyebrow">01 / ABOUT</p><h2>让每一次点击，<br><em>都有理由。</em></h2></div><div><p class="section-copy">${escapeHtml(profile.about)}</p><div class="stats">${profile.stats.map((stat) => `<div class="stat"><strong>${escapeHtml(stat.value)}</strong><span>${escapeHtml(stat.label)}</span></div>`).join('')}</div></div></div></section>
@@ -45,7 +65,7 @@ function renderPortfolio(data) {
 
 function renderProjects(projects, filter = '全部') {
   const visibleProjects = filter === '全部' ? projects : projects.filter((project) => project.type === filter);
-  document.getElementById('projects-grid').innerHTML = visibleProjects.map((project) => `<article class="project-card ${escapeHtml(project.accent)}" tabindex="0" data-project="${project.id}"><div class="project-thumb"><span>${escapeHtml(project.type)}</span><b>${String(project.id).padStart(2, '0')}</b></div><div class="project-body"><p class="project-type">${escapeHtml(project.type)}</p><h3>${escapeHtml(project.title)}</h3><p class="muted">${escapeHtml(project.description)}</p><div class="tags">${tagList(project.tags)}</div></div></article>`).join('');
+  document.getElementById('projects-grid').innerHTML = visibleProjects.map((project) => `<article class="project-card ${escapeHtml(project.accent)}" tabindex="0" data-project="${project.id}"><div class="project-thumb"><span>${escapeHtml(project.type)}</span><b>${String(project.id).padStart(2, '0')}</b></div><div class="project-body"><div class="project-meta"><p class="project-type">${escapeHtml(project.type)}</p><p class="project-client">${escapeHtml(project.client || 'Client')}</p></div><h3>${escapeHtml(project.title)}</h3><p class="muted">${escapeHtml(project.description)}</p><div class="tags">${tagList(project.tags)}</div></div></article>`).join('');
   document.querySelectorAll('.project-card').forEach((card) => {
     card.addEventListener('click', () => openProject(Number(card.dataset.project)));
     card.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); card.click(); } });
